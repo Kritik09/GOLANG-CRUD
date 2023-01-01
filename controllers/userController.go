@@ -9,6 +9,6 @@ import (
 func UserController(router *gin.Engine) {
 	router.GET("/GetAllUser",routes.GetAllUser)
 	router.POST("/AddUser",routes.AddUser)
-	router.POST("/DeleteUser/:id",routes.DeleteUser)
-	router.GET("/FindUserByName/:name",routes.FindUserByName)
+	router.POST("/DeleteUser",routes.DeleteUser)
+	router.GET("/FindUserByName",routes.FindUserByName)
 }

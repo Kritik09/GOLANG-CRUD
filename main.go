@@ -4,6 +4,7 @@ import (
 	"go-api/controllers"
 	databaseconfiguration "go-api/databaseConfiguration"
 	"go-api/environmentVariables"
+	"go-api/redisCache"
 
 	"github.com/gin-gonic/gin"
 )
@@ -11,6 +12,7 @@ import (
 func init() {
 	environmentVariables.LoadEnvironmentVariables()
 	databaseconfiguration.ConnectToDatabase()
+	redisCache.InitializeRedis()
 }
 
 func main() {
